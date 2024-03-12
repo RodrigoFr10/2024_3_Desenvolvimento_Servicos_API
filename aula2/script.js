@@ -12,11 +12,19 @@ function calcular(){
     n1=document.getElementById("num").value
     n2=document.getElementById("num2").value
     resp=""
-    if(isNaN(n1)){
-        resp+="O valor do primeiro campo precisa ser um número. "
+    if (n1==""){
+        resp+="O primeiro campo está vazio<br>"
+    }else{
+        if(isNaN(n1)){
+            resp+="O valor do primeiro campo precisa ser um número<br> "
+        }
     }
-    if(isNaN(n2)){
-        resp+="O valor do segundo campo precisa ser um número"
+    if (n2==""){
+        resp+="O segundo campo está vazio"
+    }else{
+        if(isNaN(n2)){
+            resp+="O valor do segundo campo precisa ser um número"
+        }
     }
     if (resp==""){
         n1=parseInt(n1)
