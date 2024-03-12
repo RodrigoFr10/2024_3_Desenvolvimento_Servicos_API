@@ -27,8 +27,8 @@ function calcular(){
         }
     }
     if (resp==""){
-        n1=parseInt(n1)
-        n2=parseInt(n2)
+        n1=parseFloat(n1)
+        n2=parseFloat(n2)
         document.getElementById("result").innerHTML=n1+n2
     }else{
         document.getElementById("result").innerHTML=resp
