@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="minhaDiv">
+        Oi
+    </div>
+    
+    <button onclick="alterar()">Alterar</button><br>
+    <input id="nome">
+    <button onclick="addTxt(document.getElementById('nome').value)">+</button>
+    <div id="bloco">a</div>
+    <script>
+        lista=["joao","Pedro"]
+        let mDiv = document.getElementById("minhaDiv")
+        conteudo= mDiv.innerHTML + " galerinha <hr>"
+        mDiv.innerHTML=conteudo
+        document.write("Bom dia <i>pessoal</i>")
+        for(i=0;i<lista.length;i++){
+            document.write("<p>"+lista[i]+"</p>")
+        }
+        for(i=0;i<200;i++){
+
+            document.write("<p style=color:rgb("+Math.random()*255+","+Math.random()*255+","+Math.random()*255+");> Bom dia <i>pessoal</i></p>")
+        }
+        window.alert("Bem-vindos ao novo semestre!")
+        console.log("Escrevendo no console")
+        mDiv.style.background="#f00"
+        mDiv.style.width="50%";
+        mDiv.setAttribute("align","center");
+
+        function addTxt(x){
+            if(x!=""){
+                lista.push(x)
+            }
+            
+            document.getElementById("bloco").innerHTML=lista
+            
+        }
+
+    </script>
+    
+</body>
+</html>
